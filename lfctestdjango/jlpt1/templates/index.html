@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+</html>
+<head>
+    <title>考试报名统计</title>
+</head>
+<body>
+<p style="text-align:center;font-size:1.5em;">考试</p>
+<form action="/jlpt/" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>你要参加哪个等级的考试？</legend>
+        {{ form.as_p }}
+        <input type="submit" value="submit" />
+    </fieldset>
+</form>
+</body>
+</html>
